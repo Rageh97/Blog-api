@@ -14,7 +14,7 @@ mongoose
     console.log(err);
   });
 
-app.use("api/v1/blogs", blogsRoutes);
+app.use("/api/v1/blogs", blogsRoutes);
 
 const PORT = 8000;
 app.listen(PORT, () => {

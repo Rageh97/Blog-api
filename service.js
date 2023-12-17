@@ -7,6 +7,7 @@ exports.createBlog = async (req, res) => {
 
 exports.getBlogs = async (req, res) => {
   const blogs = await Blog.find({});
+
   res.status(200).json({ data: blogs });
 };
 
@@ -18,7 +19,8 @@ exports.getBlog = async (req, res) => {
 
 exports.updateBlog = async (req, res) => {
   const { id } = req.params;
-  const blog = await Blog.findByIdAndUpdate(id);
+  // const {title,body } = req.body;
+  const blog = await Blog.findByIdAndUpdate(id , req.body , {new:true});
   res.status(200).json({ data: blog });
 };
 

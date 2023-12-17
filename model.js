@@ -3,4 +3,4 @@ const blogSchema = new mongoose.Schema({
     title:String,
     body:String
 })
-module.exports = mongoose.model('Blog', blogSchema);
+module.exports = mongoose.model('blogs', blogSchema);
